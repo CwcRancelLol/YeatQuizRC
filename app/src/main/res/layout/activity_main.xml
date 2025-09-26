@@ -1,0 +1,66 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:gravity="center"
+        android:background="@color/blue"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The earth is round."
+            android:textColor="@color/white"
+            android:id="@+id/questionTV"
+            android:textSize="30sp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:text="True"
+            android:id="@+id/correctBTN"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:text="False"
+            android:id="@+id/falseBTN"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/yellow"
+            android:text="Done"
+            android:id="@+id/doneBTN"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_gravity="bottom"
+        android:background="@color/brown"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
