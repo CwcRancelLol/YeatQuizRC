@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">YeatQuizRC</string>
+    <string name="str_done_btn">DONE</string>
+    <string name="false_btn">FALSE</string>
+    <string name="toasts_correct_btn">You got it right!</string>
+    <string name="q1_text">hola hola oha</string>
 </resources>

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         correctBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "You got it right!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.correct_btn, Toast.LENGTH_SHORT).show();
                 score += 1;
             }
         });

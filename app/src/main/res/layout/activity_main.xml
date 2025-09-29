@@ -29,15 +29,15 @@
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:backgroundTint="@color/yellow"
-            android:text="False"
+            android:text="@string/false_btn"
             android:id="@+id/falseBTN"/>
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
             android:backgroundTint="@color/yellow"
-            android:text="Done"
-            android:id="@+id/doneBTN"/>
+            android:id="@+id/doneBTN"
+            android:text="@string/str_done_btn"/>
 
     </LinearLayout>
 
