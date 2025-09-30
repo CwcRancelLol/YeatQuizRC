@@ -4,14 +4,18 @@ public class Question {
     private String questionText;
     private boolean isCorrect;
 
+    private boolean answer;
+
     public Question(){
         questionText = "";
         isCorrect = false;
+        answer = false;
     }
 
-    public Question(String nQuestion, boolean nIsCorrect){
+    public Question(String nQuestion, boolean nIsCorrect, boolean nAnswer){
         questionText = nQuestion;
         isCorrect = nIsCorrect;
+        answer = nAnswer;
     }
 
     public String getQuestion(){
@@ -21,6 +25,10 @@ public class Question {
         return isCorrect;
     }
 
+    public boolean getnAnswer(){
+        return answer;
+    }
+
     public void setQuestion(String newQuestion){
         questionText = newQuestion;
     }
@@ -28,7 +36,11 @@ public class Question {
     public void setIsCorrect(boolean newIsCorrect){
         isCorrect = newIsCorrect;
     }
-    String[] Question = { "How many Continents are in this earth",};
+
+    public void setnAnswer(boolean newAnswer){
+        answer = newAnswer;
+    }
+
 
 
 }

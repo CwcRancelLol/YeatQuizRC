@@ -9,11 +9,20 @@ import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
 
 public class MainActivity extends AppCompatActivity {
+
+    Question q1 = new Question("The Earth is round.", false, true);
+    Question q2 = new Question("There are 3 contintents.", false, false);
+    Question q3 = new Question("Earth is the closest planet to the sun.", false, false);
+    Question q4 = new Question("The rain means God is crying.", false, false);
+    Question q5 = new Question("The Earth's atmosphere is made mostly of oxygen", false, false);
+    Question q6 = new Question("Earth is the biggest planet in our solar system.", false, false);
+    Question q7 = new Question("Earth takes 365 days to orbit the sun", false, true);
+    Question q8 = new Question("The Earth's atmosphere is mostly made up of nitrogen.", false, true);
+    Question q9 = new Question("The Earth has more than one moon", false, true);
+    Question q10 = new Question("The Earth has 5 layers.", false, false);
 
     Button correctBTN, falseBTN, doneBTN;
     TextView questionTV;
@@ -30,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         correctBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, R.string.correct_btn, Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.toasts_correct_btn, Toast.LENGTH_SHORT).show();
                 score += 1;
             }
         });
