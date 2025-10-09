@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -13,7 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    Question q1 = new Question("The Earth is round.", false, true);
+    q1 = new Question("The Earth is round.", false, true);
     Question q2 = new Question("There are 3 contintents.", false, false);
     Question q3 = new Question("Earth is the closest planet to the sun.", false, false);
     Question q4 = new Question("The rain means God is crying.", false, false);
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button correctBTN, falseBTN, doneBTN;
     TextView questionTV;
+    ImageView questionIV;
 
     int score;
 

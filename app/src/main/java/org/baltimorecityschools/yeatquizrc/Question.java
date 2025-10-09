@@ -4,6 +4,10 @@ public class Question {
     private String questionText;
     private boolean isCorrect;
 
+    private int [] questionImages = {
+            R.drawable.flat_earth
+    };
+
     private boolean answer;
 
     public Question(){
