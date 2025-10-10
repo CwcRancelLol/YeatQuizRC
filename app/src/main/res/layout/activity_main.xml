@@ -11,12 +11,8 @@
         android:gravity="center"
         android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/questionIV"
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:contentDescription="@string/questionImage"
-            android:src="@drawable/flat_earth" />
+        <!--Image view here -->
+
 
         <TextView
             android:id="@+id/questionTV"

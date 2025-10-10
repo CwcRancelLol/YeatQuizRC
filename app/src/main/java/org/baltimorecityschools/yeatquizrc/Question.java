@@ -4,8 +4,22 @@ public class Question {
     private String questionText;
     private boolean isCorrect;
 
-    private int [] questionImages = {
-            R.drawable.flat_earth
+    @Override
+    public String toString() {
+        return "" + questionText;
+    }
+
+    public int [] questionImages = {
+            R.drawable.flat_earth,
+            R.drawable.supercontinent,
+            R.drawable.solarsystem,
+            R.drawable.q4,
+            R.drawable.q5,
+            R.drawable.q6,
+            R.drawable.q7,
+            R.drawable.q8,
+            R.drawable.q9,
+            R.drawable.q10
     };
 
     private boolean answer;
