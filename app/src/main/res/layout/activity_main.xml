@@ -13,9 +13,10 @@
 
         <!--Image view here -->
         <ImageView
+            android:id="@+id/question_image"
             android:layout_width="250dp"
             android:layout_height="250dp"
-            android:id="@+id/question_image">
+            android:layout_marginHorizontal="@android:dimen/app_icon_size">
 
         </ImageView>
 
