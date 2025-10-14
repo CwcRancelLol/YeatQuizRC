@@ -4,36 +4,30 @@ public class Question {
     private String questionText;
     private boolean isCorrect;
 
+
     @Override
     public String toString() {
         return "" + questionText;
     }
 
-    public int [] questionImages = {
-            R.drawable.flat_earth,
-            R.drawable.supercontinent,
-            R.drawable.solarsystem,
-            R.drawable.q4,
-            R.drawable.q5,
-            R.drawable.q6,
-            R.drawable.q7,
-            R.drawable.q8,
-            R.drawable.q9,
-            R.drawable.q10
-    };
 
-    private boolean answer;
 
-    public Question(){
-        questionText = "";
-        isCorrect = false;
-        answer = false;
-    }
+    public boolean answer;
+    private int imageResId;
 
-    public Question(String nQuestion, boolean nIsCorrect, boolean nAnswer){
+    //public Question(){
+        //questionText = "";
+        //isCorrect = false;
+        //answer = false;
+        //imageResId = imageResId;
+
+    //}
+
+    public Question(String nQuestion, boolean nIsCorrect, boolean nAnswer, int nimageResId){
         questionText = nQuestion;
         isCorrect = nIsCorrect;
         answer = nAnswer;
+        imageResId = nimageResId;
     }
 
     public String getQuestion(){
@@ -45,6 +39,10 @@ public class Question {
 
     public boolean getnAnswer(){
         return answer;
+    }
+
+    public int getImageResId() {
+        return imageResId;
     }
 
     public void setQuestion(String newQuestion){
