@@ -16,7 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     //Question q1 = new Question("The Earth is round.", false, true);
-    //Question q2 = new Question("There are 3 contintents.", false, false);
+    //Question q2 = new Question("There are 3 continents.", false, false);
     //Question q3 = new Question("Earth is the closest planet to the sun.", false, false);
     //Question q4 = new Question("The rain means God is crying.", false, false);
     //Question q5 = new Question("The Earth's atmosphere is made mostly of oxygen", false, false);
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button trueBTN, falseBTN, doneBTN;
     TextView questionTV;
+
     int questionIndex = 0;
     int score;
 

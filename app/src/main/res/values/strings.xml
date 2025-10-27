@@ -2,6 +2,16 @@
     <string name="app_name">YeatQuizRC</string>
     <string name="str_done_btn">DONE</string>
     <string name="false_btn">FALSE</string>
+    <string name="true_btn">TRUE</string>
     <string name="toasts_correct_btn">You got it right!</string>
-    <string name="q1_text">hola hola oha</string>
+    <string name="q1_text">The Earth is round.</string>
+    <string name="q2_text">There are 3 continents.</string>
+    <string name="q3_text">Earth is the closest planet to the sun.</string>
+    <string name="q4_text">The rain means God is crying.</string>
+    <string name="q5_text">The Earths atmosphere is made mostly of oxygen</string>
+    <string name="q6_text">Earth is the biggest planet in our solar system.</string>
+    <string name="q7_text">Earth takes 365 days to orbit the sun</string>
+    <string name="q8_text">The Earths atmosphere is mostly made up of nitrogen.</string>
+    <string name="q9_text">The Earth has more than one moon</string>
+    <string name="q10_text">The Earth has 5 layers.</string>
 </resources>

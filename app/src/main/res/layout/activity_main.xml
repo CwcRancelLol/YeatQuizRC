@@ -25,7 +25,7 @@
             android:id="@+id/questionTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="The earth is round."
+            android:text="@string/q1_text"
             android:textColor="@color/white"
             android:textSize="30sp" />
 
@@ -34,7 +34,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/yellow"
-            android:text="True"
+            android:text="@string/true_btn"
             android:textColor="@color/black" />
 
         <Button

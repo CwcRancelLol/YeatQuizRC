@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">YeatQuizRC</string>
+    <string name="str_done_btn">Termino</string>
+    <string name="false_btn">Falso</string>
+    <string name="true_btn">Verdad</string>
+    <string name="toasts_correct_btn">Correcto!</string>
+    <string name="q1_text">La planeta es redonda</string>
+    <string name="q2_text">Hay tres continente</string>
+    <string name="q3_text">La Tierra es la planeta mas cerca a el sol.</string>
+    <string name="q4_text">La lluvia se significa que Dios estas llorando.</string>
+</resources>
