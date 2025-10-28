@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">YeatQuizRC</string>
-    <string name="str_done_btn">Termino</string>
+    <string name="str_done_btn">Finalizar</string>
     <string name="false_btn">Falso</string>
     <string name="true_btn">Verdad</string>
-    <string name="toasts_correct_btn">Correcto!</string>
-    <string name="q1_text">La planeta es redonda</string>
-    <string name="q2_text">Hay tres continente</string>
+    <string name="q1_text">La Tierra es redonda.</string>
+    <string name="q2_text">Hay tres continente.</string>
     <string name="q3_text">La Tierra es la planeta mas cerca a el sol.</string>
     <string name="q4_text">La lluvia se significa que Dios estas llorando.</string>
+    <string name="q5_text">La atmósfera de la Tierra está compuesta principalmente de oxígeno.</string>
+    <string name="q6_text">"La Tierra es el planeta más grande de nuestro sistema solar. "</string>
+    <string name="q7_text">La Tierra tarda 365 días en orbitar el Sol.</string>
+    <string name="q8_text">La atmósfera de la Tierra está compuesta principalmente de nitrógeno.</string>
+    <string name="q9_text">La Tierra tiene más de una luna.</string>
+    <string name="q10_text">La Tierra tiene 5 capas.</string>
+    <string name="correct_toast_btn">Correcto!</string>
+    <string name="false_toast_btn">Incorrecto!</string>
 </resources>

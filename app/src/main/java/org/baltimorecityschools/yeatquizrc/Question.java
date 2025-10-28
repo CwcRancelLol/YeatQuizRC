@@ -1,8 +1,7 @@
 package org.baltimorecityschools.yeatquizrc;
 
 public class Question {
-    private String questionText;
-    private boolean isCorrect;
+    private int questionText;
 
 
     @Override
@@ -23,18 +22,14 @@ public class Question {
 
     //}
 
-    public Question(String nQuestion, boolean nIsCorrect, boolean nAnswer, int nimageResId){
+    public Question(int nQuestion, boolean nAnswer, int nimageResId){
         questionText = nQuestion;
-        isCorrect = nIsCorrect;
         answer = nAnswer;
         imageResId = nimageResId;
     }
 
-    public String getQuestion(){
+    public int getQuestion(){
         return questionText;
-    }
-    public boolean getIsCorrect(){
-        return isCorrect;
     }
 
     public boolean getnAnswer(){
@@ -45,12 +40,8 @@ public class Question {
         return imageResId;
     }
 
-    public void setQuestion(String newQuestion){
+    public void setQuestion(int newQuestion){
         questionText = newQuestion;
-    }
-
-    public void setIsCorrect(boolean newIsCorrect){
-        isCorrect = newIsCorrect;
     }
 
     public void setnAnswer(boolean newAnswer){

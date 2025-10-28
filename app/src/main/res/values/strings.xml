@@ -3,7 +3,8 @@
     <string name="str_done_btn">DONE</string>
     <string name="false_btn">FALSE</string>
     <string name="true_btn">TRUE</string>
-    <string name="toasts_correct_btn">You got it right!</string>
+    <string name="correct_toast_btn">You got it right!</string>
+    <string name="false_toast_btn">You got it wrong!</string>
     <string name="q1_text">The Earth is round.</string>
     <string name="q2_text">There are 3 continents.</string>
     <string name="q3_text">Earth is the closest planet to the sun.</string>

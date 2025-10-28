@@ -1,7 +1,6 @@
 package org.baltimorecityschools.yeatquizrc;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,19 +31,21 @@ public class MainActivity extends AppCompatActivity {
     int questionIndex = 0;
     int score;
 
+    boolean userAnswer;
+
     ImageView questionIV;
 
     Question[] questionsList = {
-            new Question("The Earth is round.", false, true, R.drawable.flat_earth),
-           new Question("There are 3 contintents.", false, false, R.drawable.supercontinent),
-            new Question("Earth is the closest planet to the sun.", false, false, R.drawable.solarsystem),
-            new Question("The rain means God is crying.", false, false, R.drawable.q4),
-           new Question("The Earth's atmosphere is made mostly of oxygen", false, false, R.drawable.q5),
-            new Question("Earth is the biggest planet in our solar system.", false, false, R.drawable.q6),
-            new Question("Earth takes 365 days to orbit the sun", false, true, R.drawable.q7),
-            new Question("The Earth's atmosphere is mostly made up of nitrogen.", false, true, R.drawable.q8),
-            new Question("The Earth has more than one moon", false, true, R.drawable.q9),
-           new Question("The Earth has 5 layers.", false, false, R.drawable.q10)
+            new Question(R.string.q1_text, true, R.drawable.flat_earth),
+           new Question(R.string.q2_text, false, R.drawable.supercontinent),
+            new Question(R.string.q3_text, false, R.drawable.solarsystem),
+            new Question(R.string.q4_text, false, R.drawable.q4),
+           new Question(R.string.q5_text, false, R.drawable.q5),
+            new Question(R.string.q6_text, false, R.drawable.q6),
+            new Question(R.string.q7_text, true, R.drawable.q7),
+            new Question(R.string.q8_text, true, R.drawable.q8),
+            new Question(R.string.q9_text, false, R.drawable.q9),
+           new Question(R.string.q10_text, false, R.drawable.q10)
    };
 
     Question currentQuestion = questionsList[questionIndex];
@@ -69,20 +70,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //make an if loop saying if its right make that toast, and other wise.
-                Toast.makeText(MainActivity.this, R.string.toasts_correct_btn, Toast.LENGTH_SHORT).show();
-                score += 1;
+                userAnswer = true;
+                checkAnswer(userAnswer);
+                //Toast.makeText(MainActivity.this, R.string.toasts_correct_btn, Toast.LENGTH_SHORT).show();
+                //score += 1;
                 questionIndex++;
                 loadQuestion();
-
-                //questionTV.setText(q2.toString());
 
             }
         });
         falseBTN.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, "You got it wrong!", Toast.LENGTH_SHORT).show();
-                TextView tv = (TextView) findViewById(R.id.questionTV);
+                userAnswer = false;
+                checkAnswer(userAnswer);
+                //Toast.makeText(MainActivity.this, "You got it wrong!", Toast.LENGTH_SHORT).show();
                 questionIndex++;
                 loadQuestion();
                 //questionTV.setText(q2.toString());
@@ -111,6 +113,17 @@ public class MainActivity extends AppCompatActivity {
             Intent leaveIntent = new Intent(MainActivity.this, scoreActivity.class);
             leaveIntent.putExtra("score", score);
             startActivity(leaveIntent);
+        }
+    }
+    public void checkAnswer(boolean userAnswer){
+        boolean correctAnswer = questionsList[questionIndex].getnAnswer();
+
+        if (userAnswer == correctAnswer){
+            Toast.makeText(MainActivity.this, R.string.correct_toast_btn, Toast.LENGTH_SHORT).show();
+            score += 1;
+        }
+        else {
+            Toast.makeText(MainActivity.this, R.string.false_toast_btn, Toast.LENGTH_SHORT).show();
         }
     }
 
