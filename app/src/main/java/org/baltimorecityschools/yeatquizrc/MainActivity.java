@@ -1,9 +1,11 @@
 package org.baltimorecityschools.yeatquizrc;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,8 +27,10 @@ public class MainActivity extends AppCompatActivity {
     //Question q9 = new Question("The Earth has more than one moon", false, true);
     //Question q10 = new Question("The Earth has 5 layers.", false, false);
 
-    Button trueBTN, falseBTN, doneBTN;
+    Button trueBTN, falseBTN, doneBTN, scoreBTN;
     TextView questionTV;
+
+    EditText emailET;
 
     int questionIndex = 0;
     int score;
@@ -47,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             new Question(R.string.q9_text, false, R.drawable.q9),
            new Question(R.string.q10_text, false, R.drawable.q10)
    };
+
 
     Question currentQuestion = questionsList[questionIndex];
 
@@ -103,7 +108,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
     }
+
     public void loadQuestion(){
         if(questionIndex < questionsList.length) {
             Question currentQuestion = questionsList[questionIndex];

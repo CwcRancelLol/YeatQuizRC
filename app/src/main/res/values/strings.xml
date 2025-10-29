@@ -15,4 +15,8 @@
     <string name="q8_text">The Earths atmosphere is mostly made up of nitrogen.</string>
     <string name="q9_text">The Earth has more than one moon</string>
     <string name="q10_text">The Earth has 5 layers.</string>
+    <string name="enter_email_toast">Type your email!</string>
+    <string name="email_subject">World Quiz App Score</string>
+    <string name="enter_email">Enter your email</string>
+
 </resources>
