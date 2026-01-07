@@ -1,6 +1,7 @@
 package org.baltimorecityschools.yeatquizrc;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -12,6 +13,9 @@ import android.widget.Toast;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,14 +32,26 @@ public class MainActivity extends AppCompatActivity {
     //Question q10 = new Question("The Earth has 5 layers.", false, false);
 
     Button trueBTN, falseBTN, doneBTN, scoreBTN;
-    TextView questionTV;
+    TextView questionTV, nameDisplay;
 
     EditText emailET;
+
+    FirebaseDatabase database;
+
+    DatabaseReference myRef;
+
+
 
     int questionIndex = 0;
     int score;
 
     boolean userAnswer;
+
+
+    SharedPreferences myPrefs;
+
+    final String sharedPrefFile = "org.baltimorecityschools.yeatquizrc";
+
 
     ImageView questionIV;
 
@@ -46,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
             new Question(R.string.q4_text, false, R.drawable.q4),
            new Question(R.string.q5_text, false, R.drawable.q5),
             new Question(R.string.q6_text, false, R.drawable.q6),
-            new Question(R.string.q7_text, true, R.drawable.q7),
-            new Question(R.string.q8_text, true, R.drawable.q8),
+            new Question(R.string.q7_text, true, R.drawable.q7),            new Question(R.string.q8_text, true, R.drawable.q8),
             new Question(R.string.q9_text, false, R.drawable.q9),
            new Question(R.string.q10_text, false, R.drawable.q10)
    };
@@ -63,11 +78,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        myPrefs = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         trueBTN = (Button) findViewById(R.id.trueBTN);
         falseBTN = (Button) findViewById(R.id.falseBTN);
         doneBTN = (Button) findViewById(R.id.doneBTN);
         questionTV = (TextView) findViewById(R.id.questionTV);
         questionIV = (ImageView) findViewById(R.id.question_image);
+        nameDisplay = (TextView) findViewById(R.id.nameDisplay);
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("message");
         loadQuestion();
 
         questionTV.setText(currentQuestion.getQuestion());
@@ -104,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent leaveIntent = new Intent(MainActivity.this, scoreActivity.class);
                 leaveIntent.putExtra("score", score);
+
                 startActivity(leaveIntent);
             }
         });

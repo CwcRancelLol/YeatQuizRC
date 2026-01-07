@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "246139663770",
+    "firebase_url": "https://yeatquizrc-default-rtdb.firebaseio.com",
+    "project_id": "yeatquizrc",
+    "storage_bucket": "yeatquizrc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246139663770:android:d18a673cfd6d7f6ec37623",
+        "android_client_info": {
+          "package_name": "org.baltimorecityschools.yeatquizrc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUgSYj2FXw8dlHiBJewkaiD-6v11E0tVg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

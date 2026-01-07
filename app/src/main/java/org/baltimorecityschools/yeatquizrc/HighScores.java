@@ -1,3 +1,5 @@
+package org.baltimorecityschools.yeatquizrc;
+
 public class HighScores {
 
     String name;
@@ -37,7 +39,7 @@ public class HighScores {
 
     @Override
     public String toString() {
-        return "HighScores{" +
+        return "org.baltimorecityschools.yeatquizrc.HighScores{" +
                 "name='" + name + '\'' +
                 ", score=" + score +
                 '}';

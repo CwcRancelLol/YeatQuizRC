@@ -10,9 +10,9 @@ import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class scoreActivity extends AppCompatActivity {
 
@@ -21,11 +21,18 @@ public class scoreActivity extends AppCompatActivity {
     Intent incomingIntent;
     int score;
 
-    Button scoreBTN;
+    Button scoreBTN, uploadBTN;
 
-    String userEmail;
+    //userScore2 is for firebase
 
-    String userScore;
+    String userEmail, userScore2;
+
+    String userScore, username;
+    FirebaseDatabase database;
+
+    DatabaseReference myRef;
+
+    HighScores newHS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +40,10 @@ public class scoreActivity extends AppCompatActivity {
         setContentView(R.layout.activity_score);
         scoreTV = (TextView) findViewById(R.id.scoreTV);
         scoreBTN = (Button) findViewById(R.id.scoreBTN);
+        uploadBTN = (Button) findViewById(R.id.uploadBTN);
         emailET = (EditText) findViewById(R.id.emailET);
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference("message");
         emailET.setText("");
         score = 0;
         incomingIntent = getIntent();
@@ -55,6 +65,20 @@ public class scoreActivity extends AppCompatActivity {
             }
 
         });
+
+        uploadBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+
+                newHS = new HighScores( ,score);
+
+                myRef.setValue(newHS);
+
+
+            }
+
+        });
     }
     public void composeEmail(String userEmail, String subject, String userScore) {
         Intent intent = new Intent(Intent.ACTION_SEND);
@@ -70,4 +94,7 @@ public class scoreActivity extends AppCompatActivity {
 
             }
         }
+
+    public static class WelcomeActivity {
     }
+}
