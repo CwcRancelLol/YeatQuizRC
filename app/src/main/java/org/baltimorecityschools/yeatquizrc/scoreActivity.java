@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class scoreActivity extends AppCompatActivity {
 
     TextView scoreTV;
-    EditText emailET;
+    EditText emailET, nameET;
     Intent incomingIntent;
     int score;
 
@@ -42,6 +42,7 @@ public class scoreActivity extends AppCompatActivity {
         scoreBTN = (Button) findViewById(R.id.scoreBTN);
         uploadBTN = (Button) findViewById(R.id.uploadBTN);
         emailET = (EditText) findViewById(R.id.emailET);
+        nameET = (EditText) findViewById(R.id.nameET);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("message");
         emailET.setText("");
@@ -71,7 +72,7 @@ public class scoreActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                newHS = new HighScores( ,score);
+                newHS = new HighScores(username,score);
 
                 myRef.setValue(newHS);
 

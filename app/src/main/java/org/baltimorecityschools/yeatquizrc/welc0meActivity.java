@@ -54,6 +54,7 @@ public class welc0meActivity extends AppCompatActivity {
         rank1TV = (TextView) findViewById(R.id.rank1TV);
         rank2TV = (TextView) findViewById(R.id.rank2TV);
         rank3TV = (TextView) findViewById(R.id.rank3TV);
+        usernameET = (EditText) findViewById(R.id.usernameET);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("message");
 
@@ -61,20 +62,20 @@ public class welc0meActivity extends AppCompatActivity {
         //loadLeaderboard();
 
 
-        myRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                if (dataSnapshot.exists()){
-                    final String message = dataSnapshot.getValue(String.class);
+        //myRef.addValueEventListener(new ValueEventListener() {
+            //@Override
+            //public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //if (dataSnapshot.exists()){
+                    //final String message = dataSnapshot.getValue(String.class);
                     //fireBaseTextView2.setText(message);
-                }
-            }
+                //}
+            //}
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
+            //@Override
+            //public void onCancelled(@NonNull DatabaseError databaseError) {
 
-            }
-        });
+            //}
+        //});
         yesBTN.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -98,6 +99,7 @@ public class welc0meActivity extends AppCompatActivity {
                 username = usernameET.getText().toString();
                 spEditor.putString(USER_KEY, username);
                 spEditor.apply();
+                //myRef.setValue(username);
 
                 Intent leaveIntent = new Intent(welc0meActivity.this, MainActivity.class);
                 startActivity(leaveIntent);

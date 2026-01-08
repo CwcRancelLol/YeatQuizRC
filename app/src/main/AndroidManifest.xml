@@ -14,13 +14,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YeatQuizRC">
         <activity
-            android:name=".welc0meActivity"
+            android:name=".MainActivity"
             android:exported="false" />
         <activity
             android:name=".scoreActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".welc0meActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

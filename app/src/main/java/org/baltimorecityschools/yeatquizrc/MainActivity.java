@@ -47,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
 
     boolean userAnswer;
 
+    String nameFromBox;
+
 
     SharedPreferences myPrefs;
 
@@ -89,6 +91,9 @@ public class MainActivity extends AppCompatActivity {
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("message");
         loadQuestion();
+
+        //nameDisplay.setText(getText().toString(););
+        nameFromBox = nameDisplay.getText().toString();
 
         questionTV.setText(currentQuestion.getQuestion());
         trueBTN.setOnClickListener(new View.OnClickListener() {
