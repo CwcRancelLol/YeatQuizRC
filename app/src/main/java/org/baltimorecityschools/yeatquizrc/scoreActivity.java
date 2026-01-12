@@ -72,9 +72,15 @@ public class scoreActivity extends AppCompatActivity {
             public void onClick(View view) {
 
 
-                newHS = new HighScores(username,score);
 
-                myRef.setValue(newHS);
+
+                newHS = new HighScores(nameET.getText().toString(),score);
+
+                //myRef.setValue(newHS);
+
+                String key = myRef.push().getKey();
+
+                myRef.child(key).setValue(newHS);
 
 
             }
