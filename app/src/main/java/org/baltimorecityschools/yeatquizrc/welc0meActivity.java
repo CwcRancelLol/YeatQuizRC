@@ -2,7 +2,10 @@ package org.baltimorecityschools.yeatquizrc;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.IBinder;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -11,6 +14,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -25,6 +29,7 @@ import com.google.firebase.database.annotations.NotNull;
 import com.google.firebase.database.snapshot.Index;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class welc0meActivity extends AppCompatActivity {
 
@@ -90,6 +95,7 @@ public class welc0meActivity extends AppCompatActivity {
                             hsList.add(newHS);
 
                         }
+                        Collections.sort(hsList);
                         //Check if we have any customers
                         if (hsList.size() > 0) {
                             //Set the current index to 0, which is the first entry in the array
@@ -117,37 +123,6 @@ public class welc0meActivity extends AppCompatActivity {
                 myRef.addValueEventListener(allHighscoreQueryEventListener);
 
 
-        //public void loadUser(){
-                //HighScores newUser =
-                //rank1TV.setText(currentQuestion.getQuestion());
-            //}
-
-
-        // mkae a load leaderboard with some methods that will sort them
-        //loadLeaderboard();
-
-
-
-
-
-
-
-
-
-        //myRef.addValueEventListener(new ValueEventListener() {
-            //@Override
-            //public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //if (dataSnapshot.exists()){
-                    //final String message = dataSnapshot.getValue(String.class);
-                    //fireBaseTextView2.setText(message);
-                //}
-            //}
-
-            //@Override
-            //public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            //}
-        //});
         yesBTN.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
@@ -171,8 +146,9 @@ public class welc0meActivity extends AppCompatActivity {
                 username = usernameET.getText().toString();
                 spEditor.putString(USER_KEY, username);
                 spEditor.apply();
+                MediaPlayer mp = MediaPlayer.create(welc0meActivity.this,R.raw.songy);
+                mp.start();
                 //myRef.setValue(username);
-
                 Intent leaveIntent = new Intent(welc0meActivity.this, MainActivity.class);
                 startActivity(leaveIntent);
 

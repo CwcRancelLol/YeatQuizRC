@@ -1,6 +1,6 @@
 package org.baltimorecityschools.yeatquizrc;
 
-public class HighScores {
+public class HighScores implements Comparable{
 
     String name;
 
@@ -35,6 +35,14 @@ public class HighScores {
 
     public void setScore(int score) {
         this.score = score;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        HighScores other = (HighScores) o;
+        int answer = other.score - this.score;
+        return answer;
+
     }
 
     @Override
