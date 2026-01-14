@@ -5,7 +5,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/flat_earth">
+    android:background="@drawable/holfff">
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,6 +60,15 @@
         android:text="Send To Highscore Leaderboard"
         android:textSize="20sp"
         android:id="@+id/uploadBTN"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Restart"
+        android:textSize="20sp"
+        android:id="@+id/restartBTN"/>
+
+
 
 
 

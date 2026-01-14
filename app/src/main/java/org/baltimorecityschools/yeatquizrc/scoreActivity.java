@@ -21,7 +21,7 @@ public class scoreActivity extends AppCompatActivity {
     Intent incomingIntent;
     int score;
 
-    Button scoreBTN, uploadBTN;
+    Button scoreBTN, uploadBTN, restartBTN;
 
     //userScore2 is for firebase
 
@@ -41,6 +41,7 @@ public class scoreActivity extends AppCompatActivity {
         scoreTV = (TextView) findViewById(R.id.scoreTV);
         scoreBTN = (Button) findViewById(R.id.scoreBTN);
         uploadBTN = (Button) findViewById(R.id.uploadBTN);
+        restartBTN = (Button) findViewById(R.id.restartBTN);
         emailET = (EditText) findViewById(R.id.emailET);
         nameET = (EditText) findViewById(R.id.nameET);
         database = FirebaseDatabase.getInstance();
@@ -86,6 +87,21 @@ public class scoreActivity extends AppCompatActivity {
             }
 
         });
+        restartBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    // Restart the current activity
+                    Intent intent = getIntent();
+                    score = 0;
+                    Intent leaveIntent = new Intent(scoreActivity.this, welc0meActivity.class);
+
+                    startActivity(leaveIntent); // Finish the current activity
+
+            }
+
+        });
+
+
     }
     public void composeEmail(String userEmail, String subject, String userScore) {
         Intent intent = new Intent(Intent.ACTION_SEND);
